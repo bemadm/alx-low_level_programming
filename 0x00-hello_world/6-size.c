@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* main -prints the size of varios types */
+
 int main(void)
 
 {
