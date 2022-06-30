@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
-*main - starts program
-*description -function - print exactly the message
-*return: returns the value o if exit properly, non zero otherwise
+*main print exactly the messagewith proper grammar, 
+but the outcome is a piece of art,
+*Return : always 0
 */
 int main(void)
 {

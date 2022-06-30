@@ -1,11 +1,10 @@
 #include<stdio.h>
 /**
- * main - starts the programme to print.
- * function puts() - print exactly what is inside it.
- * return() - it exit properly return a value 1.
- */
+* main -entry point
+* Return: Always 0 (sucess)
+*/
 int main(void)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return(0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
