@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
 *main - starts program
-*function main - print exactly the message
-*return - if exited properly return zero
+*description -function - print exactly the message
+*return: returns the value o if exit properly, non zero otherwise
 */
 int main(void)
 {
