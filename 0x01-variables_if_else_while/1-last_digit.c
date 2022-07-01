@@ -14,11 +14,11 @@ n = rand() - RAND_MAX / 2;
 printf("last digit of %d is", n);
 if (n > 5)
 {
-printf("greater than 5");
+printf("greater than %d 5", n);
 }
 if (n == 0)
 {
-printf("is 0");
+printf("is 0 %d ", n);
 }
 if (n < 0 && n != 0)
 {
