@@ -7,17 +7,16 @@
  */
 int _putchar(char c);
 {
-	return (write(1, &c, 1));
-			
-#include<unistd.h>                                                
-
+return (write(1, &c, 1));
+#include<unistd.h>
 /**
-* _putchar - writes the character c to stdout
-*  @c : the character to print                                   
-*  Return : on success 1                                         
-*on error, -1 is returned, and err no is set appropritely    
-*/                                                               
-int _putchar(char c);                                             
+* _putchar - writes the character c to stdou
+*  @c : the character to print
+*  Return : on success 1
+*on error, -1 is returned, and err no is set appropritely
+*/
+int _putchar(char c);
 {
-return(write(1, &c, 1));
-}}	
+return (write(1, &c, 1));
+}
+}
