@@ -1,1 +1,1 @@
-0x03-debugging c-Debugging repo
+understanding the concepet  and processes of debugging manually.
