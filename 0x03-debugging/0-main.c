@@ -1,17 +1,13 @@
 #include "main.h"
-
 /**
- * main - finds and prints the first 98 Fibonacci numb
- * Return: ALways 0 (Success)
- */
-
+* main - tests function that prints if integer is positive or negative
+* Return: 0
+*/
 int main(void)
 {
-int i;
+	int i;
 
-i = 0;
-postive_or_negative(i);
-
-return (0);
+	i = 0;
+	positive_or_negative(i);
+	return (0);
 }
-
