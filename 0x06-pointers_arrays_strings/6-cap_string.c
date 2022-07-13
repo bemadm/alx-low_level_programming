@@ -1,27 +1,37 @@
 #include "main.h"
-#include <string.h>
 /**
 * cap_string -> this a function for changing to uppercase
-* @x : string param
+* @s : string param
 * Return: capitalized version string
 */
-char *cap_string(char *x)
+char *cap_string(char *s)
 {
-char spc[] = {32, 9, '\n', ',', '.', '!', '?', '"', '(', ')', '{', '}'};
-int len = 13;
-int a = 0, i;
+int x, y;
+char nots[] = {'\n', ',', '.', '!', '?', '"', '(', ')', '{', '}'};
+int trigger;
 
-while (x[a])
+for (x = 0, trigger = 0; s[x] != '\0'; x++)
 {
-i = 0;
+	if (s[0] > 96 && s[0] < 123)
+		trigger = 1;
+	for (y = 0; nots[y] != '\0'; y++)
+	{
+		if (nots[y] == s[x])
+			trigger = 1;
+	}
+	if (trigger)
+	{
+		if (s[x] > 96 && s[x] < 123)
+		{
+			s[x] -= 32;
+			trigger = 0;
+		}
+		else if (s[x] > 64 && s[x] < 91)
+			trigger = 0;
+		else if (s[x] > 7 && s[x] < 58)
+			trigger = 0;
+	}
 
-while (i < len)
-{
-if ((a == 0 || x[a - 1] == spc[i] && (x[a] >= 97) && x[a] <= 122))
-x[a] = x[a] - 32;
-i++;
 }
-a++;
-}
-return (x);
+return (0);
 }
