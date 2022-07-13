@@ -8,7 +8,13 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-int result;
+int r;
 
-result = strncpy(s1, s2);
-return (result);
+for (r = 0; s1[r] != '\0' || s2[r] != '\0'; r++)
+{
+	if (s1[r] != s2[r])
+		return (s1[r] - s2[r]);
+
+}
+return (0);
+}
