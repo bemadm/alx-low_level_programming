@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
-*main : this is a function to print its name
-* @argc : argc parameter
-* @argv: an array of a command liste
-* Rreturn : 0 for success
+* main -> this a function strcat
+* @argc : first parameter
+* @argv : second parameter
+* Return: 0 success
 */
+
 int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("%s\n", *argv);
