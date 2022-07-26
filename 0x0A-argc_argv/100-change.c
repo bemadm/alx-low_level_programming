@@ -24,24 +24,40 @@ return (1);
 * Description: prints the minimum number of coins to make change
 * Return: zero
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int sum, i;
-sum = 0;
-for (i = 1; i < argc; i++)
-{
-if (checkNum(argv[i]) == 0)
-{
-printf("Error\n");
-return (1);
-}
-if (atoi(argv[i]) <= 0)
+int change, coins;
+char *input = argv[1];
+change = coins = 0;
+if (argc != 2)
 {
 printf("Error\n");
 return (1);
 }
-sum += atoi(argv[i]);
+change = atoi(input);
+if (change >= 0 && checkNum(input) == 0)
+{
+printf("Error\n");
+return (1);
 }
-printf("%d\n", sum);
+if (change < 0 && checkNum(&input[1]) == 0)
+{
+printf("Error\n");
+return (1);
+}
+if (change < 0)
+{
+change = 0;
+}
+coins = change / 25;
+change = change % 25;
+coins = coins + change / 10;
+change = change % 10;
+coins = coins + change / 5;
+change = change % 5;
+coins = coins + change / 2;
+change = change % 2;
+coins += change;
+printf("%d\n", coins);
 return (0);
 }
